@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>NYSDS Vanilla Demo</title>
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./src/assets/css/vendor/nysds-full.min.css" />
+    <link
+      rel="preload"
+      href="./src/assets/fonts/proximanova-regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link href="./src/assets/fonts/nysds-fonts.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="nys-grid-container-widescreen" id="main-content">
+      <div class="nys-grid-row">
+        <div class="nys-tablet:nys-grid-col-3"></div>
+        <div class="nys-tablet:nys-grid-col-6">
+ <br><br><br>
+            <nys-button id="my-trigger-id" label="Dropdown Menu"></nys-button>
+            <nys-dropdownmenu id="my-dropdownmenu" for="my-trigger-id">
+                <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+                <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+                <nys-dropdownmenuitem label="Organizations" href="/organizations"></nys-dropdownmenuitem>
+                <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+            </nys-dropdownmenu>
+<br><br><br>
+
+<nys-globalheader
+  appName="User Registration Form"
+  agencyName="Office of Information Technology Services"
+>
+  <nys-button
+    id="trigger-id1"
+    slot="user-actions"
+    label="Log out"
+    prefixIcon="slotted"
+  >
+    <nys-avatar
+      slot="prefix-icon"
+      ariaLabel="User avatar"
+      initials="NY"
+    ></nys-avatar>
+  </nys-button>
+</nys-globalheader>
+
+<nys-dropdownmenu
+  id="dropdownmenu1"
+  for="trigger-id1"
+  position="bottom-end"
+>
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+</nys-dropdownmenu>
+
+        </div>
+        <div class="nys-tablet:nys-grid-col-3"></div>
+      </div>
+    </div>
+    <script
+      src="./src/assets/js/vendor/nysds.js"
+      async
+      defer
+      type="module"
+    ></script>
+  </body>
+</html>
